@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>手工交换SDP信息与ICE信息</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+    </head>
+    <body>
+        <button type="button" onclick="startVideo();">开始捕获视频信息</button>
+        <button type="button" onclick="stopVideo();">停止捕获视频信息</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" onclick="connect();">建立连接</button>
+        <button type="button" onclick="hangUp();">挂断</button>
+        <br/>
+        <div>
+            <video id="local-video"  autoplay style="width:240px; height:180ox;border:1px solid black;"></video>
+            <video id="remote-video-0"  autoplay style="width:240px; height:180ox;border:1px solid black;"></video>
+            <video id="remote-video-1"  autoplay style="width:240px; height:180ox;border:1px solid black;"></video>
+            <video id="remote-video-2"  autoplay style="width:240px; height:180ox;border:1px solid black;"></video>
+        </div>
+        <script type="text/javascript"  src="./soket.js"></script>
+        <script type="text/javascript" src="./index.js">
+        </script>
+    </body>
+</html>

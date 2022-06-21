@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>手工交换SDP信息与ICE信息</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+    </head>
+    <body>
+        <button type="button" onclick="startVideo();">开始捕获视频信息</button>
+        <button type="button" onclick="stopVideo();">停止捕获视频信息</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" onclick="connect();">建立连接</button>
+        <button type="button" onclick="hangUp();">挂断</button>
+        <br/>
+        <div>
+            <video id="local-video"  autoplay style="width:240px; height:180ox;border:1px solid black;"></video>
+            <video id="remote-video"  autoplay style="width:240px; height:180ox;border:1px solid black;"></video>
+        </div>
+        <p>
+            要发送的SDP信息：<br/>
+            <textarea id="text-for-send-sdp" rows="5" cols="100" disabled='1'>要发送的SDP信息</textarea>
+        </p>
+        <p>
+            接受到的SDP信息：<br/>
+            <textarea id="text-for-receive-sdp" rows="5" cols="100">接受到的SDP信息</textarea>
+            <br/>
+            <button type="button" onclick="onSDP();">接受SDP</button>
+        </p>
+        <p>
+            要发送的ice候选者信息：<br/>
+            <textarea id="text-for-send-ice" rows="5" cols="100" disabled='1'></textarea>
+        </p>
+        <p>
+            接收到的ice候选者信息：<br/>
+            <textarea id="text-for-receive-ice" rows="5" cols="100">接收到的ice候选者信息</textarea>
+            <br/>
+            <button type="button" onclick="onICE();">接收到的ice候选者</button>
+        </p>
+        <script type="text/javascript"  src="./soket.js"></script>
+        <script type="text/javascript" src="./index.js">
+        </script>
+    </body>
+</html>
