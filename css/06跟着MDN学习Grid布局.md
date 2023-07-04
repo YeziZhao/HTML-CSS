@@ -42,13 +42,14 @@
 | grid-template                | grid-template-rows 与 grid-template-columns 简写， [参考地址](https://developer.mozilla.org/zh-CN/docs/Web/CSS/grid-template) |                                                                                     |
 | grid-auto-rows               | 多余网格中的行                                                                                                                | grid-auto-rows: 200px 200px                                                          |
 | grid-auto-columns            | 多余网格中的列                                                                                                                | grid-auto-rows: 200px 200px                                                          |
-| align-items                  | 容器属性，设置网格中所有单元格`垂直`位置                                                                                      | align-items: start; <br/>(start \| end \| center \| stretch)                        |
-| justify-items                | 容器属性，设置网格中所有单元格`水平`位置                                                                                      | justify-items: start; <br/>(start \| end \| center \| stretch)                      |
+| align-items                  | 容器属性，控制`网格项`（相对网格项）的对其方式，设置在`网格容器`上。  | align-items: start; <br/>(start \| end \| center \| stretch)                        |
+| justify-items                | 容器属性，控制`网格项`（相对于`网格项`）的水平对齐方式。主要是`网格项自己对其方式`                   | justify-items: start; <br/>(start \| end \| center \| stretch)                      |
+| justify-content| 容器属性，控制`网格列`的水平对齐方式。主要是网格列一列列对其方式。| start\|end\|center\|space-between\|space-around|
+| align-content| 容器属性，控制`网格列`的`垂直`对齐方式。设置在`网格容器`上。| start\|end\|center\|space-between\|space-around|
 | place-items                  | 是 align-items 与 justify-items 的简写。                                                                                      | place-items: center stretch; <br>                                                   |
 | grid-column-gap \/column-gap | 网格列间距                                                                                                                    | grid-column-gap: 10px; <br>column-gap: 10px;                                        |
 | grid-row-gap \/row-gap       | 网格行间距                                                                                                                    | grid-row-gap: 10px;<br>row-gap: 10px;                                               |
 | grid-gap \/ gap              | 行与列合并编写                                                                                                                | rgid-gap: 10px 40px; <br> gap: 10px 40px                                            |
-
 tips: 浏览器后续将删除 grid-column-gap /grid-row-gap/ grid-gap 的前缀`grid`。
 
 #### 项目属性
@@ -66,6 +67,12 @@ tips: 浏览器后续将删除 grid-column-gap /grid-row-gap/ grid-gap 的前缀
 | align-self        | 设置到格子上，覆盖已有的 align-items 的值。                                                                                                                | align-self：start                                                                                                                                                                                                                                                                                            | center | end | stretch; 默认为 stretch. |
 | justify-self      | 设置到格子上，覆盖已有的 justify-items 的值。                                                                                                              | align-self：start                                                                                                                                                                                                                                                                                            | center | end | stretch; 默认为 stretch. |
 | place-self        | 是 align-self 与 justify-self 的简写。                                                                                                                     | place-self: center stretch; <br>                                                                                                                                                                                                                                                                             |
+
+tips: 我总是在 align-items, align-content, justify-items, justify-content这四个属性弄混淆。再做一个总结：<br>
+flex: 一维布局，`justify-content`设置`flex容器`主轴所有`flex元素`的对其方式，`align-items`设置`交叉轴`的`flex元素`的对其方式。<br>
+grid: 二维布局。`justify-content`与`align-content`分别控制`网格列一整个列`或`网格列一整行`的对其方式。而`align-items`与`justify-items`控制`网格元素`在垂直或者水平方向的对其方式，参照物为`网格元素自己`。
+
+
 
 # 3. 容器属性使用
 
